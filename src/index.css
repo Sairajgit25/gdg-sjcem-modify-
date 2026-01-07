@@ -127,45 +127,38 @@ button {
 }
 
 .section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-align: center;
-  background: var(--google-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-shift 3s ease infinite;
-  background-size: 200% 200%;
-}
-
-.btn {
+  font-size: 50px; /* slightly increased */
+  font-weight: 800;
+  justify-content: center;
+  margin-bottom: 1.5rem; /* slightly more bottom spacing */
+  /* Force center alignment for section headings across the homepage */
+  text-align: center !important;
+  /* Make heading look bright with a soft rounded pill */
   display: inline-block;
-  padding: 12px 28px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  padding: 0.4rem 1rem 0.9rem; /* top | sides | bottom */
+  border-radius: 12px;
+  color: var(--google-blue);
+  background: linear-gradient(90deg, rgba(66,133,244,0.12), rgba(251,188,5,0.08));
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-text-fill-color: unset;
+  box-shadow: var(--shadow-sm);
 }
 
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+/* Subtitle under section titles (used by Moments that Matter) */
+.section-subtitle {
+  text-align: center;
+  /* make subtitle clearly visible on light theme */
+  color: #000000;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-.btn:hover::before {
-  width: 300px;
-  height: 300px;
+/* Dark theme adjustments for subtitles */
+[data-theme="dark"] .section-subtitle {
+  color: rgba(3, 29, 68, 0.85);
 }
 
 .btn-primary {
@@ -177,6 +170,18 @@ button {
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 25px rgba(66, 133, 244, 0.5);
+}
+
+/* Make sure the ripple/highlight effect doesn't cover the button text */
+.btn {
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  z-index: 0;
+  /* make the highlight subtler so text remains legible */
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .btn-outline {

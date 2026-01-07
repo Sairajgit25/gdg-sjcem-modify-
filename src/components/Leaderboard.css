@@ -135,7 +135,8 @@
     font-weight: 700;
     margin-bottom: 5px;
     text-align: center;
-    color: var(--text-color);
+    /* ensure name is visible on the podium */
+    color: #190202;
 }
 
 .podium-score {
@@ -197,7 +198,14 @@
 .list-name {
     font-weight: 600;
     display: block;
-    color: var(--text-color);
+        /* darker gray so participant names are readable */
+        color: #666666;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .podium-name,
+[data-theme="dark"] .list-name {
+    color: rgba(232,234,237,0.9);
 }
 
 .list-role {
