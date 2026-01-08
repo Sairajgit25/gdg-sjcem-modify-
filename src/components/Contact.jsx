@@ -65,7 +65,7 @@ const Contact = () => {
                             <input type="hidden" name="from_name" value="GDG Website Contact" />
 
                             <div className="form-group">
-                                <input type="text" name="name" placeholder="Your Name" required className="form-input" />
+                                <input type="text" name="name" placeholder="Your Name" Pattern ="[a-zA-Z]+" required className="form-input" />
                             </div>
                             <div className="form-group">
                                 <input type="email" name="email" placeholder="Your Email" required className="form-input" />

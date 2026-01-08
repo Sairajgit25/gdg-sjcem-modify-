@@ -27,7 +27,7 @@
 
 .leaderboard-subtitle {
     text-align: center;
-    color: #aaaaaa;
+    color: #0a0707;
     margin-bottom: 50px;
     font-size: 1.1rem;
 }
@@ -136,12 +136,12 @@
     margin-bottom: 5px;
     text-align: center;
     /* ensure name is visible on the podium */
-    color: #190202;
+    color: #100808;
 }
 
 .podium-score {
     font-size: 0.9rem;
-    color: #5f6368;
+    color: #234773;
     font-weight: 600;
 }
 
@@ -150,7 +150,7 @@
     font-weight: 800;
     opacity: 0.1;
     margin-top: auto;
-    color: var(--text-color);
+    color: #040101;
 }
 
 /* List Styles */
@@ -180,7 +180,7 @@
 .list-rank {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #5f6368;
+    color: #222831;
     width: 40px;
 }
 
@@ -199,13 +199,14 @@
     font-weight: 600;
     display: block;
         /* darker gray so participant names are readable */
-        color: #666666;
+        color: #090707;
 }
 
 /* Dark theme adjustments */
 [data-theme="dark"] .podium-name,
+[data-theme="dark"] .list-rank,
 [data-theme="dark"] .list-name {
-    color: rgba(232,234,237,0.9);
+    color: rgba(7, 10, 14, 0.9);
 }
 
 .list-role {

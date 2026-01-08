@@ -127,7 +127,7 @@ button {
 }
 
 .section-title {
-  font-size: 50px; /* slightly increased */
+  font-size: 2rem; /* slightly increased */
   font-weight: 800;
   justify-content: center;
   margin-bottom: 1.5rem; /* slightly more bottom spacing */

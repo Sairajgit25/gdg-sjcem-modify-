@@ -38,12 +38,13 @@ const Navbar = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          onClick={() => window.location.reload()} // Add this line
         >
           <img src="/gdg-logo.png" alt="GDG Logo" className="logo-img" />
         </motion.div>
 
         <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
-          <a href="/#home" onClick={() => setMenuOpen(false)}>Home</a>
+              <a href="/#home" onClick={() => window.location.reload()}>Home</a> {/* Add onClick */}
           <a href="/#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="/#events" onClick={() => setMenuOpen(false)}>Events</a>
           <Link to="/codelabs" onClick={() => setMenuOpen(false)}>Codelabs</Link>
